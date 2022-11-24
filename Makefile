@@ -1,3 +1,3 @@
-instal: npm ci
+install: npm ci
 
 brain-games: node bin/brain-games.js
