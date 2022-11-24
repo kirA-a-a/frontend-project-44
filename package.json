@@ -5,7 +5,8 @@
   "description": "[![Actions Status](https://github.com/kirA-a-a/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/kirA-a-a/frontend-project-44/actions)",
   "main": "index.js",
   "bin": {
-    "code": "bin/brain-games.js"
+    "code": "bin/brain-games.js",
+    "brain-games": "bin/brain-games.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
