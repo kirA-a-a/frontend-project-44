@@ -11,17 +11,29 @@ const brainEven = () => {
     for (let i = 0; i<3; i+=1) {
         let min = 1;
         let max = 10;
+        let answerYes = "yes";
+        let answerNo = "no";
 
         const randomNum = Math.floor(Math.random() * (max - min)) + min;
         console.log(`Question: ${randomNum}`);
         const answer = readlineSync.question('You answer: ');
 
-        if (answer === "yes" && randomNum % 2 === 0 ||
-            answer === "no" && randomNum % 2 === 1) {
-            console.log("Correct!");
-            counter += 1
+        if (answer === 'yes' && randomNum % 2 === 0) {
+            console.log("Correct!")
+            counter += 1;
+        } else if (answer === 'no' && randomNum % 2 === 1) {
+            console.log("Correct!")
+            counter += 1;
+        } else if (answer === 'yes' && randomNum % 2 === 1) {
+            console.log(`"${answerYes}" is wrong answer ;(. Correct answer was "${answerNo}".`);
+            console.log(`Let's try again, ${name}`);
+            break;
+        } else if (answer === 'no' && randomNum % 2 === 0) {
+            console.log(`"${answerNo}" is wrong answer ;(. Correct answer was "${answerYes}".`);
+            console.log(`Let's try again, ${name}`);
+            break;
         } else {
-            console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
+            console.log(`${answer} is wrong answer ;(.`);
             console.log(`Let's try again, ${name}`);
             break
         }
@@ -29,7 +41,6 @@ const brainEven = () => {
             console.log(`Congratulations, ${name}!`);
         }
     }
-
 }
 
 export {brainEven};
