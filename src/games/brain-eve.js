@@ -42,5 +42,4 @@ const brainEven = () => {
         }
     }
 };
-
-export {brainEven};
+export default brainEven;
