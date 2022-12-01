@@ -1,32 +1,39 @@
 import readlineSync from 'readline-sync';
-import greeting from "../cli.js";
 import randomNum from "../random-num.js";
 import randomMath from "../random-math.js";
 
 const calc = () => {
-    let operandLeft = randomNum();
-    let operandRight = randomNum();
-    let operation = randomMath();
+    let counter = 0;
+    console.log('Welcome to the Brain Games!');
+    const userName = readlineSync.question('May I have your name? ');
+    console.log('Hello, ' + userName + '!');
 
     console.log('What is the result of the expression?');
-    console.log(`Question: ${operandLeft} ${operation} ${operandRight}`);
 
-    switch (operation) {
-        case '+' :
-            const resultPlus = operandLeft + operandRight;
+    for (let i = 0; i < 3; i+=1) {
+        let operandLeft = randomNum();
+        let operandRight = randomNum();
+        let operation = randomMath();
+        let math = operandLeft + operation + operandRight;
+
+        console.log(`Question: ${operandLeft} ${operation} ${operandRight}`);
+        const result = eval(math);
+        const answer = Number(readlineSync.question('You answer: '));
+
+
+        if (result === answer) {
+            console.log('Correct!');
+            counter += 1
+        } else if (result !== answer) {
+            console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
+            console.log(`Let's try again, ${userName}`);
             break;
-        case '-' :
-            const resultMinus = operandLeft + operandRight;
-            break;
-        case '*':
-            const resultMultiply = operandLeft + operandRight;
-            break;
+        } if (counter === 3) {
+            console.log(`Congratulations, ${userName}!`);
+        }
     }
-
-    let answer = readlineSync.question('You answer: ');
 
 };
 
-calc();
 export default calc;
 
