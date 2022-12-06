@@ -3,13 +3,13 @@ import randomNum from "../random-num.js";
 import randomMath from "../random-math.js";
 
 const calc = () => {
-	let counter = 0;
 	console.log('Welcome to the Brain Games!');
 	const userName = readlineSync.question('May I have your name? ');
 	console.log('Hello, ' + userName + '!');
-	
+
 	console.log('What is the result of the expression?');
-	
+	let counter = 0;
+
 	for (let i = 0; i < 3; i += 1) {
 		let operandLeft = randomNum();
 		let operandRight = randomNum();
