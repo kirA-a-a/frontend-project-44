@@ -1,5 +1,4 @@
 import readlineSync from "readline-sync";
-import getArrRandomNumProgression from "../random-arr-progerssion.js";
 import randomNum from "../random-num.js";
 
 const progression = () => {
@@ -7,18 +6,30 @@ const progression = () => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log('What number is missing in the progression?');
+  let counter = 0;
+
+  for (let i = 0; i !== 3; i += 1) {
+  const result = [];
+  const progressionNum = randomNum();
+  const randomItem = randomNum();
+
+  for (let i = 1; i < 11; i+=1) {
+    result[0] = progressionNum;
+    result[i] = result[i - 1] + progressionNum;
+  }
+  const correctAnswer = Number(result[randomItem])
+  result[randomItem] = '..';
+  const newArr = result.slice(1).join(' ');
 
 
-  let counter = 0
-  for (let i = 0; i < 3; i+=1) {
-    console.log('Question: ' + getArrRandomNumProgression(randomNum()));
-    const answer = readlineSync.question('You answer: ');
+    console.log('Question: ' + newArr);
+    const answer = Number(readlineSync.question('You answer: '));
 
-    if (answer === randomNum()) {
+    if (answer === correctAnswer) {
       console.log('Correct!');
       counter += 1;
-    } else if (answer !== randomNum()) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${randomNum()}'.`);
+    } else if (answer !== correctAnswer) {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${userName}`);
       break;
     }
@@ -26,7 +37,6 @@ const progression = () => {
       console.log(`Congratulations, ${userName}!`);
     }
   }
-
 };
 
-progression();
+export default progression;
