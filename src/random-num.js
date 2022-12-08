@@ -1,6 +1,6 @@
 const randomNum = () => {
 	const min = 1;
-	const max = 30;
+	const max = 10;
 	
 	return Math.floor(Math.random() * (max - min)) + min;
 };
