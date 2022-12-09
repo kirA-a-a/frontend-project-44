@@ -17,3 +17,7 @@
 ## Asclinema for BRAIN-PROGRESSION:
 
 [![asciicast](https://asciinema.org/a/6ClCivr3DfSqH88yde65dSJnG.svg)](https://asciinema.org/a/6ClCivr3DfSqH88yde65dSJnG)
+
+## Asclinema for BRAIN- PRIME:
+
+[![asciicast](https://asciinema.org/a/3m8vVf65HqvzquBa1oj47mIGw.svg)](https://asciinema.org/a/3m8vVf65HqvzquBa1oj47mIGw)
