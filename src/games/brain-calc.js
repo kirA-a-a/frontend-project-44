@@ -20,7 +20,6 @@ const calc = () => {
 		const result = eval(math);
 		const answer = Number(readlineSync.question('You answer: '));
 		
-		
 		if (result === answer) {
 			console.log('Correct!');
 			counter += 1

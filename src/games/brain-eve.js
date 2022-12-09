@@ -16,7 +16,7 @@ const brainEven = () => {
 		
 		const randomNum = Math.floor(Math.random() * (max - min)) + min;
 		console.log(`Question: ${randomNum}`);
-		const answer = readlineSync.question('You answer: ');
+		const answer = readlineSync.question('You answer: ').toString();
 		
 		if (answer === 'yes' && randomNum % 2 === 0) {
 			console.log("Correct!");

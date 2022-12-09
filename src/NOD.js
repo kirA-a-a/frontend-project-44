@@ -4,6 +4,4 @@ const nod = (x, y) => {
   return nod(y, x % y);
 };
 
-
-
 export default nod;
