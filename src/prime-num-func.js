@@ -6,5 +6,4 @@ const primeNum = (num) => {
   } return true;
 };
 
-console.log(primeNum(4))
 export default primeNum;
