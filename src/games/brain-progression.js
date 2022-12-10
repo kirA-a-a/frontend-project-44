@@ -30,7 +30,7 @@ const progression = () => {
       counter += 1;
     } else if (answer !== correctAnswer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${userName}`);
+      console.log(`Let's try again, ${userName}!`);
       break;
     }
     if (counter === 3) {
