@@ -13,6 +13,7 @@ const progression = () => {
     const progressionNum = randomNum();
     const randomItem = randomNum();
 
+    // eslint-disable-next-line no-shadow
     for (let i = 1; i < 11; i += 1) {
       result[0] = progressionNum;
       result[i] = result[i - 1] + progressionNum;
