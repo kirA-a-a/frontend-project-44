@@ -23,11 +23,11 @@ const prime = () => {
       counter += 1
     }else if (primeNum(number) === false && answer === 'yes') {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.`);
-      console.log(`Let's try again, ${userName}`);
+      console.log(`Let's try again, ${userName}!`);
       break;
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.`);
-      console.log(`Let's try again, ${userName}`);
+      console.log(`Let's try again, ${userName}!`);
       break;
     }
     if (counter === 3) {
