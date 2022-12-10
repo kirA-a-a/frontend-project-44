@@ -30,10 +30,13 @@ const brainEven = () => {
 			console.log(`'${answerNo}' is wrong answer ;(. Correct answer was '${answerYes}'.`);
 			console.log(`Let's try again, ${name}`);
 			break;
-		} else {
-			console.log(`${answer} is wrong answer ;(.`);
+		} else if (answer !== 'yes' && randomNum % 2 === 0) {
+			console.log(`${answer} is wrong answer ;(. Correct answer was ${answerYes}`);
 			console.log(`Let's try again, ${name}`);
 			break;
+		} else if (answer !== 'no' && randomNum % 2 === 1) {
+			console.log(`${answer} is wrong answer ;(. Correct answer was ${answerNo}`);
+			console.log(`Let's try again, ${name}`);
 		}
 		if (counter === 3) {
 			console.log(`Congratulations, ${name}!`);
