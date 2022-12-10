@@ -7,7 +7,7 @@ const gsd = () => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
-  console.log('Find the greatest common division of given number.');
+  console.log('Find the greatest common divisor of given numbers.');
   let counter = 0;
 
   for (let i = 0; i < 3; i+=1) {
@@ -24,7 +24,7 @@ const gsd = () => {
       counter += 1
     } else if (answer !== result) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
-      console.log(`Let's try again, ${userName}`);
+      console.log(`Let's try again, ${userName}!`);
       break;
     }
     if (counter === 3) {
