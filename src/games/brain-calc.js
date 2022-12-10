@@ -25,7 +25,7 @@ const calc = () => {
 			counter += 1
 		} else if (result !== answer) {
 			console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
-			console.log(`Let's try again, ${userName}`);
+			console.log(`Let's try again, ${userName}!`);
 			break;
 		}
 		if (counter === 3) {
