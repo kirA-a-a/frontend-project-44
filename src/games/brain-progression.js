@@ -1,5 +1,5 @@
-import readlineSync from "readline-sync";
-import randomNum from "../random-num.js";
+import readlineSync from 'readline-sync';
+import randomNum from '../random-num.js';
 
 const progression = () => {
   console.log('Welcome to the Brain Games!');
@@ -9,20 +9,19 @@ const progression = () => {
   let counter = 0;
 
   for (let i = 0; i !== 3; i += 1) {
-  const result = [];
-  const progressionNum = randomNum();
-  const randomItem = randomNum();
+    const result = [];
+    const progressionNum = randomNum();
+    const randomItem = randomNum();
 
-  for (let i = 1; i < 11; i+=1) {
-    result[0] = progressionNum;
-    result[i] = result[i - 1] + progressionNum;
-  }
-  const correctAnswer = Number(result[randomItem])
-  result[randomItem] = '..';
-  const newArr = result.slice(1).join(' ');
+    for (let i = 1; i < 11; i += 1) {
+      result[0] = progressionNum;
+      result[i] = result[i - 1] + progressionNum;
+    }
+    const correctAnswer = Number(result[randomItem]);
+    result[randomItem] = '..';
+    const newArr = result.slice(1).join(' ');
 
-
-    console.log('Question: ' + newArr);
+    console.log(`Question: ${newArr}`);
     const answer = Number(readlineSync.question('You answer: '));
 
     if (answer === correctAnswer) {

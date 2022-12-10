@@ -1,6 +1,3 @@
-import greeting from "./cli.js";
+import greeting from './cli.js';
 
-
-
-
-greeting()
+greeting();

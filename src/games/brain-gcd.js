@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
-import randomNum from "../random-num.js";
-import nod from "../NOD.js";
+import randomNum from '../random-num.js';
+import nod from '../NOD.js';
 
 const gsd = () => {
   console.log('Welcome to the Brain Games!');
@@ -10,10 +10,10 @@ const gsd = () => {
   console.log('Find the greatest common divisor of given numbers.');
   let counter = 0;
 
-  for (let i = 0; i < 3; i+=1) {
-    let leftNum = randomNum();
-    let rightNum = randomNum();
-    let result = nod(leftNum, rightNum)
+  for (let i = 0; i < 3; i += 1) {
+    const leftNum = randomNum();
+    const rightNum = randomNum();
+    const result = nod(leftNum, rightNum);
     console.log(`Question: ${leftNum} ${rightNum}`);
 
     const answer = Number(readlineSync.question('Your answer: '));
@@ -21,7 +21,7 @@ const gsd = () => {
 
     if (answer === result) {
       console.log('Correct!');
-      counter += 1
+      counter += 1;
     } else if (answer !== result) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
       console.log(`Let's try again, ${userName}!`);
