@@ -1,3 +1,38 @@
+### Install project
+
+```bash
+make install
+```
+
+### Run project 
+
+#### Brain game
+```bash
+make brain-games
+```
+#### Calculator game
+```bash
+make brain-calc
+```
+
+#### Even game
+```bash
+make brain-even
+```
+#### Gcd game
+```bash
+make brain-gcd
+```
+#### Prime game
+```bash
+make brain-prime
+```
+
+#### Arithmetical progression game
+```bash
+make brain-progression
+```
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/kirA-a-a/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/kirA-a-a/frontend-project-44/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f9864dcaa90dba266af1/maintainability)](https://codeclimate.com/github/kirA-a-a/frontend-project-44/maintainability)
