@@ -1,5 +1,4 @@
 #!/usr/bin/env node
+import answerEventOrNo from '../src/games/evenOrNo.js';
 
-import brainEven from '../src/games/brain-eve.js';
-
-brainEven();
+answerEventOrNo();
